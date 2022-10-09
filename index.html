@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        
+        <title>Image Classification WebApp</title>
+        <meta name="keywords" content="cutom file input, styling, label, cross-browser, accessible, input type file" />
+		
+		
+    
+    <style>
+        h1
+        {
+            color:white;
+            padding-top :25px;
+            padding-bottom:25px;
+        }
+        .upload-file {
+            display: flex;
+           justify-content: center;
+           align-items: center;
+           margin-top:220px;
+        }
+        .file-form-input{
+           padding-bottom:20px;
+        }
+        
+    </style>
+   <body>
+       <nav class="navbar navbar-dark bg-dark">
+        <!-- Navbar content -->
+           <h1> DL ASSIGNMENT</h1>
+       </nav>
+       <div class="upload-file">
+      <form action = "{{ url_for('upload_image_file') }}" method = "POST" 
+         enctype = "multipart/form-data">
+         <input class="file-form-input" type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>
+      </div>
+   </body>
+</html>
